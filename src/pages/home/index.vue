@@ -24,7 +24,9 @@ export default {
 };
 </script>
 
-<template>我是内容组件</template>
+<template>
+  <div class="middle">我是内容组件</div>
+</template>
 
 <style scoped>
 a {
@@ -41,5 +43,10 @@ code {
   padding: 2px 4px;
   border-radius: 4px;
   color: #304455;
+}
+.middle {
+  height: 80vh;
+  width: 100vw;
+  background: skyblue;
 }
 </style>

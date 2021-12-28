@@ -10,7 +10,7 @@ import{get,post} from "@/utils/request";
 
 
 /**
- * @name:查看图书内容
+ * @name:查看商品列表
  */
  export function getGoodsList(params: any) {
     return get("/goods", params);

@@ -18,24 +18,40 @@ const defaultRouter = [
         component:()=> import("@/pages/app/index.vue"),
         children:[
         {
+          path:'login',
+          name:'login',
+          components:{
+            head:()=>import('@/pages/head/index.vue'),
+            content:()=>import('@/pages/home/index.vue'),
+            footer:()=>import('@/pages/footer/index.vue'),
+          },
+          meta:{
+            title:'登录',
+            need_log:false
+          }
+        },
+        // {},
+        {
             path:'home',
             name:'home',
             components:{
               head:()=>import('@/pages/head/index.vue'),
               content:()=>import('@/pages/home/index.vue'),
               footer:()=>import('@/pages/footer/index.vue'),
-            }
-        },
-        // {
-        //   path:'home',
-        //   name:'home',
-        //   components:{
-        //     head:()=>import('@/pages/head/index.vue'),
-        //     content:()=>import('@/pages/home/index.vue'),
-        //     footer:()=>import('@/pages/footer/index.vue'),
-        //   }
-        // },
+            },
+            children:[
 
+            ]
+        },
+        {
+          path:'shoppingcart',
+          name:'home',
+          components:{
+            head:()=>import('@/pages/head/index.vue'),
+            content:()=>import('@/pages/home/index.vue'),
+            footer:()=>import('@/pages/footer/index.vue'),
+          }
+        }
         ]
     },
 
