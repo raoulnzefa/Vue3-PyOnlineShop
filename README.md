@@ -1,12 +1,25 @@
 # Vue 3 + Typescript + Vite
+    本项目纯属学习使用,代码不足之处还请见谅，第一次写vue3+ts+vite构建的项目，前前后后踩得坑也比较多
+    开源出来也是希望能够帮到有些同学。
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+## 本网站所用技术
+> 1. Vue3 以及配套技术链
+> 2. python+django+rest_framework 实现后台用户管理，后台接口文档
+> 3. mysql 数据库，实现用户信息存储
+> 5. 其余的功能需求，自己手写。。。(这个是别人原先的Vue2项目，我拿过来自己重写)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+------------------------------大家将就着看，多多少少有点帮助-----------------------------------
 
-## Type Support For `.vue` Imports in TS
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
-# Vue3-PyOnlineShop
+## 如何让(前台)项目跑起来（本地需要python 和 mysql,我就使用phpstudy）
+> 1. 下载源码
+> 2. npm i 安装依赖
+> 3. npm run app 启动本地后台服务器
+> 4. npm run dev 启动Vue测试服务器
+> 5. 开启 mysql 数据库服务
+> 6. 要项目启动无误的话，要将python后台Django跑起来，所有页面才会正常展示。 
+
+# 后台使用的mysql+python+django+rest_framework
+
+
