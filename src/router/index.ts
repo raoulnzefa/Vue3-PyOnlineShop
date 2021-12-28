@@ -10,22 +10,32 @@ const defaultRouter = [
     {
       path:'/',
       name:'首页',
-      redirect:{name:'app'}
+      redirect:{name:'home'}
     },
     {
         path: "/app",
         name: "app",
         component:()=> import("@/pages/app/index.vue"),
         children:[
-          {
+        {
             path:'home',
             name:'home',
             components:{
               head:()=>import('@/pages/head/index.vue'),
               content:()=>import('@/pages/home/index.vue'),
               footer:()=>import('@/pages/footer/index.vue'),
-          }
+            }
         },
+        // {
+        //   path:'home',
+        //   name:'home',
+        //   components:{
+        //     head:()=>import('@/pages/head/index.vue'),
+        //     content:()=>import('@/pages/home/index.vue'),
+        //     footer:()=>import('@/pages/footer/index.vue'),
+        //   }
+        // },
+
         ]
     },
 
