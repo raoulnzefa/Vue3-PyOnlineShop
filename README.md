@@ -15,10 +15,9 @@
 ## 如何让(前台)项目跑起来（本地需要python 和 mysql,我就使用phpstudy）
 > 1. 下载源码
 > 2. npm i 安装依赖
-> 3. npm run app 启动本地后台服务器
-> 4. npm run dev 启动Vue测试服务器
-> 5. 开启 mysql 数据库服务
-> 6. 要项目启动无误的话，要将python后台Django跑起来，所有页面才会正常展示。 
+> 3. npm run dev 启动本地后台服务器
+> 4. 开启 mysql 数据库服务
+> 5. 要项目启动无误的话，要将python后台Django跑起来，所有页面才会正常展示。 
 
 # 后台使用的mysql+python+django+rest_framework
 
