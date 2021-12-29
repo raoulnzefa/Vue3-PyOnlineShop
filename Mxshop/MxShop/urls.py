@@ -39,7 +39,7 @@ router.register(r'goods',GoodsListViewSet,basename='goods');
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('media/)',serve,{"document_root": MEDIA_ROOT}),
+    path('media/(?P<path>.*))',serve,{"document_root": MEDIA_ROOT}),
     # path('api/goods/',goods_list,name="GoodsListView"),
     path('api-auth/',include('rest_framework.urls', namespace='rest_framework')),
     path('api/', include((router.urls, 'app_name'))),

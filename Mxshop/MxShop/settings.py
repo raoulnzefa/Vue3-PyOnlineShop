@@ -31,6 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 AUTH_USER_MODEL = 'users.UserProfile'
 # Application definition
 
@@ -50,6 +52,7 @@ INSTALLED_APPS = [
     'user_operation.apps.UserOperationConfig',
     # 在此处注册 rest_framework
     'crispy_forms',
+    'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
 ]
@@ -69,7 +72,7 @@ ROOT_URLCONF = 'MxShop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
