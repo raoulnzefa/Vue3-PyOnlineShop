@@ -1,1 +1,17 @@
-import Vuex from 'vuex';
+// tslint:disable
+import mutations from './mutations';
+import {createStore} from 'vuex';
+
+
+
+// export default createStore({
+//     state:{
+
+//     },
+//     getters:{
+
+//     },
+//     mutations:{
+
+//     }
+// })

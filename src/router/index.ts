@@ -2,6 +2,7 @@
  * @Descripttion: 路由配置文件
  * @Date: 2021-05-26 20:33:07
  */
+// tslint:disable
 
 import {createRouter,createWebHistory} from "vue-router"
 
@@ -34,8 +35,8 @@ const defaultRouter = [
             path: 'register',
             name: 'register',
             components:{
-              head:()=>import('@/pages/head/index.vue'),
-              content:()=>import('@/pages/home/index.vue'),
+              head:()=>import('@/pages/loginHead/index.vue'),
+              content:()=>import('@/pages/register/index.vue'),
               footer:()=>import('@/pages/footer/index.vue'),
             },
             meta:{
@@ -105,7 +106,8 @@ const router = createRouter({
 // houzhi
 // 修改跳转路由的标题
 router.afterEach((to,from,next)=>{
-  document.title = to.matched[to.matched.length-1].meta.title;
+  const title = to.matched[to.matched.length-1].meta.title;
+  document.title = title;
 })
 
 // 抛出路由

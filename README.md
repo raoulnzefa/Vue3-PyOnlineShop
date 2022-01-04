@@ -1,7 +1,7 @@
 # Vue 3 + Typescript + Vite
     本项目纯属学习使用,代码不足之处还请见谅，第一次写vue3+ts+vite构建的项目，前前后后踩得坑也比较多
     开源出来也是希望能够帮到有些同学。
-后台文件目录在Mxshop目录里面
+
 
 ## 本网站所用技术
 > 1. Vue3 以及配套技术链
@@ -15,10 +15,14 @@
 ## 如何让(前台)项目跑起来（本地需要python 和 mysql,我就使用phpstudy）
 > 1. 下载源码
 > 2. npm i 安装依赖
-> 3. npm run dev 启动本地后台服务器
-> 4. 开启 mysql 数据库服务
-> 5. 要项目启动无误的话，要将python后台Django跑起来，所有页面才会正常展示。 
+> 3. npm run app 启动本地后台服务器
+> 4. npm run dev 启动Vue测试服务器
+> 5. 开启 mysql 数据库服务
+> 6. 要项目启动无误的话，要将python后台Django跑起来，所有页面才会正常展示。 
 
 # 后台使用的mysql+python+django+rest_framework
-
+    后台文件夹Mxshop,我将前后端的目录都并在一起了。
+    后续要使用的话:
+ 1. 执行**migrate** 产生对应model对应的数据表。
+ 2. run 后台服务,后台数据就能正常使用。
 
