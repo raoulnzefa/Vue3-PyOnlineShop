@@ -89,8 +89,8 @@
   </div>
 </template>
 <script>
-import { register, getMessage } from "../../api";
-import cookie from "../../../public/js/cookie";
+// import { register, getMessage } from "@/api/index.ts";
+import cookie from "@/assets/js/cookie";
 export default {
   data() {
     return {
@@ -109,12 +109,54 @@ export default {
   },
 
   methods: {
+    isRegister() {
+      var _that = this;
+
+      register({
+        password: _that.password,
+        username: _that.mobile,
+        code: _that.code,
+      })
+        .then((res) => {
+          cookie.setCookie("name", res.data.username, 7);
+          cookie.setCookie("token", res.data.token, 7);
+          //存储在store
+          // 更新store数据
+        })
+        .catch(function (error) {
+          _that.error.mobile = error.mobile ? error.mobile[0] : "";
+          _that.error.password = error.password ? error.password[0] : "";
+          _that.error.username = error.username ? error.username[0] : "";
+          _that.error.code = error.code ? error.code[0] : "";
+        });
+    },
     seedMessage() {
       var _that = this;
       // 开启倒计时
       var countdown = 60;
       settime();
-      function settime() {}
+      function settime() {
+        if (countdown == 0) {
+          _that.getMessageText = "免费获取验证码";
+          countdown = 60;
+          return;
+        } else {
+          _that.getMessageText = "重新发送(" + countdown + ")";
+          countdown--;
+        }
+
+        setTimeout(function () {
+          settime();
+        }, 1000);
+
+        // getMessage({
+        //   mobile: _that.mobile,
+        // })
+        //   .then((res) => {
+        //     console.log(res);
+        //   })
+        //   .catch(function (error) {});
+      }
     },
   },
 
