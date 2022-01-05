@@ -89,6 +89,7 @@
   </div>
 </template>
 <script>
+import { register, getMessage } from "../../api";
 import cookie from "../../../public/js/cookie";
 export default {
   data() {
